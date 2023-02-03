@@ -38,6 +38,7 @@ resource "google_container_node_pool" "primary_nodes" {
       env = var.project
     }
     # preemptible  = true
+    disk_size_gb = 25
     machine_type = "n1-standard-1"
     tags         = ["gke-node", "${var.project}-gke"]
     metadata = {
